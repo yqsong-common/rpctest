@@ -26,6 +26,7 @@ public class BeanMethod {
 	public BeanMethod(Object bean, Method method) {
 		this.bean = bean;
 		this.method = method;
+		
 	}
 	
 	public Object getBean() {
