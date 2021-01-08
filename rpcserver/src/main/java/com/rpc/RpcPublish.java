@@ -29,7 +29,7 @@ public class RpcPublish implements BeanPostProcessor {
 		//当bean被自定义rpc服务注解修饰时，自动发布服务
 		if(bean.getClass().isAnnotationPresent(MyRpcService.class)){
 			
-			for (Method method : bean.getClass().getMethods()) {
+			for (Method method :bean.getClass().getMethods()) {
 				String key= bean.getClass().getInterfaces()[0].getSimpleName()+"."+method.getName();
 				RpcContainer rpcContainer=RpcContainer.getInstance();
 				rpcContainer.addRpcMethod(key,new BeanMethod(bean,method));
