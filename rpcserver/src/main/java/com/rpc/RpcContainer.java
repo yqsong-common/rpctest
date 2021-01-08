@@ -33,7 +33,7 @@ public class RpcContainer {
 		if(rpcContainer==null){
 			synchronized (RpcContainer.class){
 				if(rpcContainer==null){
-					rpcContainer=new RpcContainer();
+					rpcContainer =new RpcContainer();
 				}
 			}
 		}
